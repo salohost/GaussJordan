@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AB4210851F7C596D0025C673 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB4210841F7C596D0025C673 /* main.cpp */; };
+		AB586D861F876C0D00C9F2B4 /* vMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB586D851F876C0D00C9F2B4 /* vMatrix.cpp */; };
+		AB586D881F876C3000C9F2B4 /* Frac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB586D871F876C3000C9F2B4 /* Frac.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		AB4210811F7C596C0025C673 /* LinearSystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LinearSystem; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4210841F7C596D0025C673 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AB4210921F7C62210025C673 /* Frac.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Frac.hpp; sourceTree = "<group>"; };
+		AB586D851F876C0D00C9F2B4 /* vMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vMatrix.cpp; sourceTree = "<group>"; };
+		AB586D871F876C3000C9F2B4 /* Frac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Frac.cpp; sourceTree = "<group>"; };
+		ABCAA89F1F80A8B3001FEFB0 /* vMatrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = vMatrix.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,11 @@
 		AB4210831F7C596C0025C673 /* LinearSystem */ = {
 			isa = PBXGroup;
 			children = (
+				AB586D871F876C3000C9F2B4 /* Frac.cpp */,
+				AB586D851F876C0D00C9F2B4 /* vMatrix.cpp */,
 				AB4210841F7C596D0025C673 /* main.cpp */,
+				ABCAA89F1F80A8B3001FEFB0 /* vMatrix.hpp */,
+				AB4210921F7C62210025C673 /* Frac.hpp */,
 			);
 			path = LinearSystem;
 			sourceTree = "<group>";
@@ -119,7 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB586D881F876C3000C9F2B4 /* Frac.cpp in Sources */,
 				AB4210851F7C596D0025C673 /* main.cpp in Sources */,
+				AB586D861F876C0D00C9F2B4 /* vMatrix.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +228,8 @@
 		AB4210891F7C596D0025C673 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.63.0/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.63.0/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -223,6 +237,8 @@
 		AB42108A1F7C596D0025C673 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.63.0/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.63.0/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -246,6 +262,7 @@
 				AB42108A1F7C596D0025C673 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
