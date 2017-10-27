@@ -140,7 +140,7 @@ public:
         range(i, 0, M.rows()) {
             out << "    ";
             range(j, 0, M.cols()) {
-                out << M(i, j) << " ";
+                out << M(i, j) << ((j < M.cols()-1) ? " & " : "");
             }
             out << (i < M.rows() ? "\\\\\n" : "\n");
         }
@@ -233,7 +233,7 @@ public:
         tie(is_there_a_solution, pivots) = A.row_reduce(b);
         
         if(!is_there_a_solution) {
-            out << "There is no soulution\n";
+            out << "There\\ is\\ no\\ soulution\n";
             return out.str();
         }
         
@@ -261,4 +261,12 @@ public:
         }
         return out.str();
     }
+
+    string str()
+    {
+        stringstream s;
+        s << self;
+        return s.str();
+    }
+
 };
